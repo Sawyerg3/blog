@@ -1,0 +1,41 @@
+const Post = require("../models/postModel");
+const asyncHandler = require("express-async-handler");
+
+/*
+getPosts,
+  setPost,
+  updatePost,
+  deletePost,
+*/
+
+// @desc Gets Fall blog posts
+// @route GET /api/posts
+// @access public
+const getPosts = asyncHandler(async (req, res) => {
+  const posts = await Post.find();
+  res.status(200).json(posts);
+});
+
+/// @desc Creates new blog post
+/// @route POST /api/posts
+/// @access private
+const setPost = asyncHandler(async (req, res) => {
+  const { title, content } = req.body;
+  //* check fields ?
+
+  try {
+    const post = await Post.create({
+      title,
+      content,
+    });
+    res.status(200).json({ success: true, post: post });
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({ success: false, message: error.message });
+  }
+});
+
+module.exports = {
+  setPost,
+  getPosts,
+};

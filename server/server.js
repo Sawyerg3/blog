@@ -6,9 +6,15 @@ const port = process.env.PORT;
 
 connectDB();
 
+app.use(express.json());
+
+// app.use(express.urlencoded({ extended: false }));
+
 app.get("/api", (req, res) => {
   res.json({ users: ["one", "next", "lastUser"] });
 });
+
+app.use("/api/posts", require("./routes/postRoutes"));
 
 app.listen(port, () => {
   console.log(`server on port ${port}`);
