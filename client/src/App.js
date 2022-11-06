@@ -1,17 +1,29 @@
-import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+import AdminLogin from "./pages/AdminLogin";
+import Posts from "./pages/admin/Posts";
 
 function App() {
-  const [backendData, setBackendData] = useState();
+  return (
+    <>
+      <Router>
+        <ToastContainer />
+        {/* <Navbar /> */}
+        <div>
+          <Routes>
+            <Route path="/admin/login" element={<AdminLogin />} />
+            {/* <Route element={<PrivateAdminRoute />}> */}
+            <Route path="/admin/posts" element={<Posts />} />
+            {/* <Route path="/admin/reviews" element={<Majors />} /> */}
+            {/* </Route> */}
 
-  useEffect(() => {
-    fetch("/api")
-      .then((response) => response.json())
-      .then((data) => {
-        setBackendData(data);
-      });
-  }, []);
-
-  return <div>App</div>;
+            {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+          </Routes>
+        </div>
+      </Router>
+    </>
+  );
 }
 
 export default App;
