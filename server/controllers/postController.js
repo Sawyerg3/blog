@@ -35,7 +35,23 @@ const setPost = asyncHandler(async (req, res) => {
   }
 });
 
+/// @desc Creates new blog post
+/// @route POST /api/posts
+/// @access private
+const deletePost = asyncHandler(async (req, res) => {
+  //* checks ?
+
+  try {
+    const post = await Post.findByIdAndDelete(req.params.id);
+    res.status(200).json({ success: true, message: "removed" });
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({ success: false, message: error.message });
+  }
+});
+
 module.exports = {
   setPost,
   getPosts,
+  deletePost,
 };
