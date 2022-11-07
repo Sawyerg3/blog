@@ -1,11 +1,14 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-
-const axios = require("axios");
+import { Navigate, Outlet } from "react-router-dom";
 
 function PrivateAdminRoute() {
-  return <div>PrivateAdminRoute</div>;
+  const userType = localStorage.getItem("type");
+
+  return !userType || userType.toLowerCase() !== "admin" ? (
+    <Navigate to="/admin/login" />
+  ) : (
+    <Outlet />
+  );
 }
 
 export default PrivateAdminRoute;

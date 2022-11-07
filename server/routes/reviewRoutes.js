@@ -7,10 +7,10 @@ const {
   deleteReview,
 } = require("../controllers/reviewController");
 
-// const { protect } = require('../middleware/authMiddleware')
+const { protect } = require("../middleware/adminAuthMiddleware");
 
-router.route("/").get(getReviews).post(setReview);
-router.route("/:id").delete(deleteReview);
+router.route("/").get(getReviews).post(protect, setReview);
+router.route("/:id").delete(protect, deleteReview);
 // router.route('/:id').delete(protect, deleteReview).put(protect, updateReview)
 
 module.exports = router;
