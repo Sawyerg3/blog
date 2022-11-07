@@ -16,6 +16,7 @@ app.get("/api", (req, res) => {
 
 app.use("/api/posts", require("./routes/postRoutes"));
 app.use("/api/reviews", require("./routes/reviewRoutes"));
+app.use("/api/admin", require("./routes/adminRoutes"));
 
 app.listen(port, () => {
   console.log(`server on port ${port}`);

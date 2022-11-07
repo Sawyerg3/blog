@@ -7,10 +7,10 @@ const {
   deletePost,
 } = require("../controllers/postController");
 
-// const { protect } = require('../middleware/authMiddleware')
+const { protect } = require("../middleware/adminAuthMiddleware");
 
-router.route("/").get(getPosts).post(setPost);
-router.route("/:id").delete(deletePost);
+router.route("/").get(getPosts).post(protect, setPost);
+router.route("/:id").delete(protect, deletePost);
 // router.route('/:id').delete(protect, deletePost).put(protect, updatePost)
 
 module.exports = router;
