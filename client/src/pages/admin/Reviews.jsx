@@ -1,13 +1,13 @@
 import React from "react";
 import AdminNav from "../../components/UI/admin/AdminNav";
 
-function Posts() {
+function Reviews() {
   return (
     <div>
       <AdminNav />
-      posts
+      Reviews
     </div>
   );
 }
 
-export default Posts;
+export default Reviews;
