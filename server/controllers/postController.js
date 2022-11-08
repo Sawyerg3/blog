@@ -20,7 +20,7 @@ const getPosts = asyncHandler(async (req, res) => {
 /// @route POST /api/posts
 /// @access private
 const setPost = asyncHandler(async (req, res) => {
-  const { title, content } = req.body;
+  const { title, content } = req.body.post;
   //* check fields ?
 
   try {
@@ -30,7 +30,7 @@ const setPost = asyncHandler(async (req, res) => {
     });
     res.status(200).json({ success: true, post: post });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(400).json({ success: false, message: error.message });
   }
 });
