@@ -10,7 +10,7 @@ import AddPostModal from "../../components/modals/AddPostModal";
 function Posts() {
   const [posts, setPosts] = useState([]);
   const [showAddModal, setAddModal] = useState(false);
-  const [currentPost, setCurrentPost] = useState({});
+  // const [currentPost, setCurrentPost] = useState({});
   const token = localStorage.getItem("token");
 
   useEffect(() => {

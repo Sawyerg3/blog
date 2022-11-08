@@ -20,7 +20,7 @@ const getReviews = asyncHandler(async (req, res) => {
 /// @route Review /api/reviews
 /// @access private
 const setReview = asyncHandler(async (req, res) => {
-  const { bookTitle, bookAuthor, rating, content } = req.body;
+  const { bookTitle, bookAuthor, rating, content } = req.body.review;
   //* check fields ?
 
   try {
@@ -30,7 +30,7 @@ const setReview = asyncHandler(async (req, res) => {
       rating,
       content,
     });
-    res.status(200).json({ success: true, review: Review });
+    res.status(200).json({ success: true, review: review });
   } catch (error) {
     console.log(error);
     res.status(400).json({ success: false, message: error.message });
