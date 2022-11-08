@@ -5,6 +5,8 @@ import AdminLogin from "./pages/AdminLogin";
 import Posts from "./pages/admin/Posts";
 import PrivateAdminRoute from "./PrivateAdminRoute";
 import Reviews from "./pages/admin/Reviews";
+import PostsPage from "./pages/PostsPage";
+import ReviewsPage from "./pages/ReviewsPage";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         {/* <Navbar /> */}
         <div>
           <Routes>
+            <Route path="/" element={<PostsPage />} />
+            <Route path="/reviews" element={<ReviewsPage />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route element={<PrivateAdminRoute />}>
               <Route path="/admin/posts" element={<Posts />} />

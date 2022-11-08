@@ -15,6 +15,7 @@ function AdminNav() {
             </li>
           </ul>
         </div>
+        <Link to="/">HomePage</Link>
       </nav>
     </>
   );

@@ -8,20 +8,14 @@ import AddReviewModal from "../../components/modals/AddReviewModal";
 function Reviews() {
   const [showAddModal, setShowAddModal] = useState(false);
   const [reviews, setReviews] = useState([]);
-  const token = localStorage.getItem("token");
 
   useEffect(() => {
     getReviews();
   }, []);
 
   const getReviews = () => {
-    const config = {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    };
     axios
-      .get(`${process.env.REACT_APP_SERVER_API}/reviews`, config)
+      .get(`${process.env.REACT_APP_SERVER_API}/reviews`)
       .then((res) => {
         setReviews(res.data);
       })
@@ -38,20 +32,15 @@ function Reviews() {
   return (
     <div>
       <AdminNav />
-      <div>
-        <div className="font-semibold mx-auto my-auto">
-          <span>Title</span>
-        </div>
-        <div className="font-semibold mx-auto ">
-          <Button
-            variant="success"
-            onClick={() => {
-              setShowAddModal(true);
-            }}
-          >
-            New
-          </Button>
-        </div>
+      <div className="font-semibold mx-auto ">
+        <Button
+          variant="success"
+          onClick={() => {
+            setShowAddModal(true);
+          }}
+        >
+          New
+        </Button>
       </div>
 
       <div>

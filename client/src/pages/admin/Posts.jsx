@@ -11,20 +11,14 @@ function Posts() {
   const [posts, setPosts] = useState([]);
   const [showAddModal, setAddModal] = useState(false);
   // const [currentPost, setCurrentPost] = useState({});
-  const token = localStorage.getItem("token");
 
   useEffect(() => {
     getPosts();
   }, []);
 
   const getPosts = () => {
-    const config = {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    };
     axios
-      .get(`${process.env.REACT_APP_SERVER_API}/posts`, config)
+      .get(`${process.env.REACT_APP_SERVER_API}/posts`)
       .then((res) => {
         setPosts(res.data);
       })
