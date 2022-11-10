@@ -7,6 +7,7 @@ import PrivateAdminRoute from "./PrivateAdminRoute";
 import Reviews from "./pages/admin/Reviews";
 import PostsPage from "./pages/PostsPage";
 import ReviewsPage from "./pages/ReviewsPage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<PostsPage />} />
             <Route path="/reviews" element={<ReviewsPage />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route element={<PrivateAdminRoute />}>
               <Route path="/admin/posts" element={<Posts />} />

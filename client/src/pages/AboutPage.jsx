@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "../components/UI/Header";
 
-function ReviewsPage() {
+function AboutPage() {
   return (
     <div>
       <Header />
-      ReviewsPage
+      AboutPage
     </div>
   );
 }
 
-export default ReviewsPage;
+export default AboutPage;

@@ -27,8 +27,11 @@ function PostsPage() {
   return (
     <div>
       <Header />
+      {posts.map((post, idx) => {
+        return <Post key={idx} title={post.title} content={post.content} />;
+      })}
       asdasd
-      <div>{posts[0].title}</div>
+      <div></div>
     </div>
   );
 }
