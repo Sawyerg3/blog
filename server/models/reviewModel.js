@@ -18,9 +18,13 @@ const reviewSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    date: {
+      type: Date,
+      default: Date.Now,
+    },
   },
   {
-    timeStamps: true,
+    timestamps: true,
   }
 );
 

@@ -4,6 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import Post from "../components/Post";
 import Header from "../components/UI/Header";
+import Footer from "../components/Footer";
 
 function PostsPage() {
   const [posts, setPosts] = useState([]);
@@ -25,14 +26,36 @@ function PostsPage() {
   };
 
   return (
-    <div>
+    <>
       <Header />
-      {posts.map((post, idx) => {
-        return <Post key={idx} title={post.title} content={post.content} />;
-      })}
-      asdasd
-      <div></div>
-    </div>
+      <div
+        style={{
+          backgroundColor: "#F3F3F3",
+          padding: 0,
+          margin: 0,
+        }}
+      >
+        <div
+          style={{
+            width: "65vw",
+            margin: "auto",
+            backgroundColor: "white",
+            // border: "solid grey",
+            // borderWidth: "0 1px",
+
+            // display: "flex",
+            // alignItems: "center",
+            // borderLeft: "1px",
+            // borderRight: "1px",
+          }}
+        >
+          {posts.map((post, idx) => {
+            return <Post key={idx} post={post} />;
+          })}
+        </div>
+        <Footer />
+      </div>
+    </>
   );
 }
 

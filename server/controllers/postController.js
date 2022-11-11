@@ -28,6 +28,7 @@ const setPost = asyncHandler(async (req, res) => {
       title,
       content,
     });
+    console.log(post.createdAt);
     res.status(200).json({ success: true, post: post });
   } catch (error) {
     // console.log(error);

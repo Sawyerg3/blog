@@ -1,0 +1,29 @@
+span {
+  font-size: x-large;
+  white-space: pre-line;
+  text-align: left;
+  /* text-indent: 50px; */
+}
+
+h5 {
+  color: gray;
+}
+
+
+.post-container {
+  padding: 15px;
+  margin: auto;
+  /* margin-top: 30px; */
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.post-header {
+  padding: 1%;
+  border-style: solid;
+  border-bottom: 1px;
+  border-color: black;
+}
+
+.post-body {
+  
+}

@@ -8,6 +8,7 @@ import Reviews from "./pages/admin/Reviews";
 import PostsPage from "./pages/PostsPage";
 import ReviewsPage from "./pages/ReviewsPage";
 import AboutPage from "./pages/AboutPage";
+import { ThemeProvider } from "@material-tailwind/react";
 
 function App() {
   return (

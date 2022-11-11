@@ -6,6 +6,7 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemButton from "@mui/material/ListItemButton";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 
 function NavDrawer() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -47,7 +48,7 @@ function NavDrawer() {
           setDrawerOpen(true);
         }}
       >
-        <MenuIcon fontSize="large" height />
+        <MenuIcon fontSize="large" height="10" />
       </IconButton>
 
       <Drawer

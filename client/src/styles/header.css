@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 
 header { 
+  min-height: 90px;
   display: flex;
   justify-content: center;
   background-color: rgb(204, 171, 132);
+  margin: 0
 }
 
 h1 {
   font-size: 4em;
   align-self: center;
   font-family: 'Playfair Display', serif;
+  margin:0
 }
 
 .menu {
@@ -17,4 +20,5 @@ h1 {
   left: 0;
   padding-left: 30px;
   padding-top: 10px;
+  margin:0
 }
