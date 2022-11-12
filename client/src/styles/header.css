@@ -4,12 +4,13 @@ header {
   min-height: 90px;
   display: flex;
   justify-content: center;
-  background-color: rgb(204, 171, 132);
+  background-color: #36454F;
+  color: white;
   margin: 0
 }
 
 h1 {
-  font-size: 4em;
+  /* font-size: 8em; */
   align-self: center;
   font-family: 'Playfair Display', serif;
   margin:0

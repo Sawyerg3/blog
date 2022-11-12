@@ -9,13 +9,13 @@ function Footer() {
         backgroundColor: "white",
         marginTop: "10px",
         textAlign: "center",
-        display: "flex",
-        justifyContent: "space-between",
+        // display: "flex",
+        // justifyContent: "space-between",
         padding: "10px",
       }}
     >
-      <h6 style={{ color: "grey" }}>Sawyer Gitzel</h6>
-      <div>links</div>
+      <h6 style={{ color: "grey" }}> &copy; 2022 | Sawyer Gitzel</h6>
+      {/* <div>links</div> */}
     </footer>
   );
 }
