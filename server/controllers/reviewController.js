@@ -17,7 +17,7 @@ const getReviews = asyncHandler(async (req, res) => {
 });
 
 /// @desc Creates new book review
-/// @route Review /api/reviews
+/// @route post /api/reviews
 /// @access private
 const setReview = asyncHandler(async (req, res) => {
   const { bookTitle, bookAuthor, rating, content } = req.body.review;

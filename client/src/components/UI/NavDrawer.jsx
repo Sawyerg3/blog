@@ -21,7 +21,7 @@ function NavDrawer() {
       },
     },
     {
-      text: "Reviews",
+      text: "Book Reviews",
       onClick: () => {
         navigate("/reviews");
         setDrawerOpen(false);

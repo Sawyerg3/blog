@@ -1,0 +1,41 @@
+p {
+  font-size: larger;
+  text-align: left;
+  white-space: pre-line;
+
+}
+
+h5 {
+  color: black;
+}
+
+h6 {
+  color: grey;
+}
+
+.review-container {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 40px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.title {
+  display: flex;
+  justify-content:space-between;
+}
+
+.rating {
+  padding: 15px;
+}
+
+.review-body {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
