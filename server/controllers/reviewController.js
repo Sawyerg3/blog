@@ -12,7 +12,7 @@ getReviews,
 // @route GET /api/reviews
 // @access public
 const getReviews = asyncHandler(async (req, res) => {
-  const reviews = await Review.find();
+  const reviews = await Review.find().sort({ createdAt: "desc" }).exec();
   res.status(200).json(reviews);
 });
 

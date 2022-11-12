@@ -12,7 +12,7 @@ getPosts,
 // @route GET /api/posts
 // @access public
 const getPosts = asyncHandler(async (req, res) => {
-  const posts = await Post.find();
+  const posts = await Post.find().sort({ createdAt: "desc" }).exec();
   res.status(200).json(posts);
 });
 
