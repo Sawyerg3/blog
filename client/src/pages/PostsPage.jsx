@@ -31,8 +31,6 @@ function PostsPage() {
       <div
         style={{
           backgroundColor: "#F3F3F3",
-          padding: 0,
-          margin: 0,
         }}
       >
         <div

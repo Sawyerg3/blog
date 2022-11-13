@@ -36,6 +36,7 @@ function ReviewsPage() {
           margin: "auto",
           width: "65vw",
           backgroundColor: "white",
+          paddingTop: "40px",
         }}
       >
         {reviews.map((review, idx) => {
