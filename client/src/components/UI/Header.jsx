@@ -9,7 +9,7 @@ function Header() {
       <div className="menu">
         <NavDrawer />
       </div>
-      <h1>Sawyer Gitzel</h1>
+      <h1 className="site-title">Sawyer Gitzel</h1>
     </header>
   );
 }

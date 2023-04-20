@@ -57,6 +57,9 @@ function AboutPage() {
             <li>Improve design </li>
             <li>Add comments and likes/dislikes to posts and reviews</li>
             <li>Improve admin pages</li>
+            <li>Adjust for any view port size</li>
+            <li>Pagination</li>
+            <li>Dark mode</li>
           </ol>
           <p>you can view the repo for the site here </p>
           <a href="https://github.com/Sawyerg3/blog">here</a>

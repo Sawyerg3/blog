@@ -36,8 +36,8 @@ const setPost = asyncHandler(async (req, res) => {
   }
 });
 
-/// @desc Creates new blog post
-/// @route POST /api/posts
+/// @desc Delete blog post
+/// @route DELETE /api/posts
 /// @access private
 const deletePost = asyncHandler(async (req, res) => {
   //* checks ?

@@ -9,11 +9,10 @@ header {
   margin: 0
 }
 
-h1 {
-  /* font-size: 8em; */
+.site-title {
+  font-size: 4em;
   align-self: center;
   font-family: 'Playfair Display', serif;
-  margin:0
 }
 
 .menu {
