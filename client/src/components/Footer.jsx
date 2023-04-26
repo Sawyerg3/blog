@@ -14,7 +14,10 @@ function Footer() {
         padding: "10px",
       }}
     >
-      <h6 style={{ color: "grey" }}> &copy; 2022 | Sawyer Gitzel</h6>
+      <h6 style={{ color: "grey" }}>
+        {" "}
+        &copy; {new Date().getFullYear()} | Sawyer Gitzel
+      </h6>
       {/* <div>links</div> */}
     </footer>
   );
