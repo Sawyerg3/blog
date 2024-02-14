@@ -32,6 +32,29 @@ function Posts() {
     setPosts([post, ...posts]);
   };
 
+  const deletePost = (post) => {
+    const token = localStorage.getItem("token");
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    axios
+      .delete(`${process.env.REACT_APP_SERVER_API}/posts/${post._id}`, config)
+      .then((res) => {
+        if (res.data.success) {
+          setPosts(posts.filter((p) => p !== post));
+          toast.success(`${post.title} Removed`);
+        } else {
+          toast.error(res.data.message);
+        }
+      })
+      .catch((error) => {
+        toast.error(error.message);
+        console.log(error);
+      });
+  };
+
   return (
     <div className="">
       <div>
@@ -81,6 +104,14 @@ function Posts() {
                     {/* <div className="align-center text-end ml-auto mr-10 ">
                       <Button variant="danger">Delete</Button>
                     </div> */}
+                    <Button
+                      variant="danger"
+                      onClick={() => {
+                        deletePost(post);
+                      }}
+                    >
+                      Delete
+                    </Button>
                   </div>
                 );
               })}

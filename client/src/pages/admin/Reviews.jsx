@@ -29,6 +29,32 @@ function Reviews() {
     setReviews([newReview, ...reviews]);
   };
 
+  const deleteReview = (review) => {
+    const token = localStorage.getItem("token");
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    axios
+      .delete(
+        `${process.env.REACT_APP_SERVER_API}/reviews/${review._id}`,
+        config
+      )
+      .then((res) => {
+        if (res.data.success) {
+          setReviews(reviews.filter((p) => p !== review));
+          toast.success(`${review.bookTitle} Removed`);
+        } else {
+          toast.error(res.data.message);
+        }
+      })
+      .catch((error) => {
+        toast.error(error.message);
+        console.log(error);
+      });
+  };
+
   return (
     <div>
       <AdminNav />
@@ -68,6 +94,14 @@ function Reviews() {
                     {/* <div className="align-center text-end ml-auto mr-10 ">
                       <Button variant="danger">Delete</Button>
                     </div> */}
+                    <Button
+                      variant="danger"
+                      onClick={() => {
+                        deleteReview(review);
+                      }}
+                    >
+                      Delete
+                    </Button>
                   </div>
                 );
               })}
