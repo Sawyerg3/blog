@@ -13,6 +13,9 @@ function AdminNav() {
             <li className="rounded-lg px-3 py-2 text-5xl text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">
               <Link to="/admin/reviews">Reviews</Link>
             </li>
+            <li className="rounded-lg px-3 py-2 text-5xl text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">
+              <Link to="/admin/projects">Projects</Link>
+            </li>
           </ul>
         </div>
         <Link to="/">HomePage</Link>

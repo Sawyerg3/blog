@@ -4,36 +4,29 @@ p {
   white-space: pre-line;
 }
 
-h5 {
-  color: black;
-}
-
-h6 {
-  color: grey;
-}
-
-.review-container {
+.project-container {
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
   font-family: "helvetica";
 }
 
-.review-header {
+.text-container {
+  width: 1000px;
+  margin-right: 5%;
+}
+
+.project-header {
   display: flex;
   justify-content: space-between;
+  /* border: 2px;
+  border-color: red;
+  border-style: solid; */
 }
 
-.title {
-  display: flex;
-  justify-content: space-between;
-}
-
-.rating {
-  padding: 15px;
-}
-
-.review-body {
+.project-body {
   padding-top: 10px;
   padding-bottom: 10px;
 }

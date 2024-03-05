@@ -48,7 +48,20 @@ function PostsPage() {
           }}
         >
           {posts.map((post, idx) => {
-            return <Post key={idx} post={post} />;
+            return (
+              <>
+                {idx > 0 && (
+                  <hr
+                    style={{
+                      color: "black",
+                      marginLeft: "20%",
+                      marginRight: "20%",
+                    }}
+                  />
+                )}
+                <Post key={idx} post={post} />
+              </>
+            );
           })}
         </div>
         <Footer />

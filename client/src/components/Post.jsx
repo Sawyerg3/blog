@@ -7,10 +7,10 @@ function Post({ post }) {
     <div className="post-container">
       <div className="post-header">
         <h1>{post.title}</h1>
-        <h5>{moment(post.createdAt).format("DD-MM-YYYY")}</h5>
+        <h6>{moment(post.createdAt).format("DD-MM-YYYY")}</h6>
       </div>
       <div className="post-body">
-        <span>{post.content}</span>
+        <p>{post.content}</p>
       </div>
       <div className="post-footer"></div>
     </div>

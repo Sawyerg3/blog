@@ -1,6 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
 const cors = require("cors");
+const AWS = require("aws-sdk");
 const connectDB = require("./config/db");
 const port = process.env.PORT;
 
@@ -18,6 +19,7 @@ app.get("/api", (req, res) => {
 
 app.use("/api/posts", require("./routes/postRoutes"));
 app.use("/api/reviews", require("./routes/reviewRoutes"));
+app.use("/api/projects", require("./routes/projectRoutes"));
 app.use("/api/admin", require("./routes/adminRoutes"));
 
 app.listen(port, () => {

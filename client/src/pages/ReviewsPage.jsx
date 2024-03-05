@@ -40,7 +40,21 @@ function ReviewsPage() {
         }}
       >
         {reviews.map((review, idx) => {
-          return <Review key={idx} review={review} />;
+          return (
+            <>
+              {idx > 0 && (
+                <hr
+                  style={{
+                    color: "black",
+                    marginLeft: "20%",
+                    marginRight: "20%",
+                    marginBottom: "5%",
+                  }}
+                />
+              )}
+              <Review key={idx} review={review} />
+            </>
+          );
         })}
       </div>
       <Footer />
