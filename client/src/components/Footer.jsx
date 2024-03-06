@@ -18,7 +18,6 @@ function Footer() {
         {" "}
         &copy; {new Date().getFullYear()} | Sawyer Gitzel
       </h6>
-      {/* <div>links</div> */}
     </footer>
   );
 }

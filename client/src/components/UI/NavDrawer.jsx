@@ -1,18 +1,24 @@
-import { Drawer, Box, Typography, IconButton } from "@mui/material";
+import { Drawer, Box, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemButton from "@mui/material/ListItemButton";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import AutoStoriesIcon from "@mui/icons-material/AutoStories";
+import { useNavigate } from "react-router-dom";
 
 function NavDrawer() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const navigate = useNavigate();
 
   const itemsList = [
+    {
+      text: "Book Reviews",
+      onClick: () => {
+        navigate("/reviews");
+        setDrawerOpen(false);
+      },
+    },
     {
       text: "Posts",
       onClick: () => {
@@ -27,15 +33,9 @@ function NavDrawer() {
         navigate("/projects");
       },
     },
+
     {
-      text: "Book Reviews",
-      onClick: () => {
-        navigate("/reviews");
-        setDrawerOpen(false);
-      },
-    },
-    {
-      text: "About",
+      text: "Contact",
       onClick: () => {
         navigate("/about");
         setDrawerOpen(false);
@@ -65,17 +65,7 @@ function NavDrawer() {
           setDrawerOpen(false);
         }}
       >
-        <Box
-          sx={{ width: 250 }}
-          // role="presentation"
-          // textAlign="center"
-          // display="flex"
-          // position="absolute"
-          // top="10%"
-          // alignItems="center"
-          // verticalAlign="baseline"
-          // onClick={setDrawerOpen(false)}
-        >
+        <Box sx={{ width: 250 }}>
           <List>
             {itemsList.map((item, index) => {
               const { text, onClick } = item;
