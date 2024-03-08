@@ -37,8 +37,6 @@ function AdminLogin() {
       })
       .catch((err) => {
         console.log("No Login");
-        // console.log(err);
-        // toast.error(err.message);
       });
   };
 

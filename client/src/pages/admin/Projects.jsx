@@ -105,9 +105,6 @@ function Projects() {
                     >
                       <span>{project.title}</span>
                     </div>
-                    {/* <div className="align-center text-end ml-auto mr-10 ">
-                      <Button variant="danger">Delete</Button>
-                    </div> */}
                     <Button
                       variant="danger"
                       onClick={() => {

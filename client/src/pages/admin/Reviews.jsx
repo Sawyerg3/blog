@@ -91,9 +91,6 @@ function Reviews() {
                     >
                       <span>{review.bookTitle}</span>
                     </div>
-                    {/* <div className="align-center text-end ml-auto mr-10 ">
-                      <Button variant="danger">Delete</Button>
-                    </div> */}
                     <Button
                       variant="danger"
                       onClick={() => {

@@ -10,11 +10,6 @@ const postSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    // date: {
-    //   type: Date,
-    //   default: new Date(),
-    //   // required: true,
-    // },
   },
   {
     timestamps: true,

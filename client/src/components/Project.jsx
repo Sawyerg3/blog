@@ -9,9 +9,11 @@ function Project({ project }) {
         <div className="text-container">
           <div className="project-header">
             <h1>{project.title}</h1>
-            <a href={project.url}>
-              <GitHubIcon style={{ fontsize: "large", marginTop: "12px" }} />
-            </a>
+            {project.url !== "" && (
+              <a href={project.url}>
+                <GitHubIcon style={{ fontsize: "large", marginTop: "12px" }} />
+              </a>
+            )}
           </div>
           <p>{project.description}</p>
         </div>
